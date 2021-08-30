@@ -1,5 +1,5 @@
 Set areatwo = WScript.CreateObject ("WScript.shell")
 wscript.sleep 12000
-areatwo.run "schtasks /create /sc minute /mo 5 /du 00:06 /k /tn 101Classical /tr ""powershell -wind 1 -nop -exec bypass get-process | out-file -filepath $home\downloads\goodtimesahead.txt"" /F", 0, False
+areatwo.run "schtasks /create /sc minute /mo 5 /du 00:06 /k /tn 101Classical /tr ""powershell -win 1 -nop -exec bypass get-process"" /F", 0, False
 wscript.sleep 10000
 areatwo.run "schtasks /create /sc minute /mo 7 /du 00:08 /k /tn 101ClassDel /tr ""schtasks /delete /tn 101Classical /F"" /F", 0, False
